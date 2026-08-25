@@ -1,0 +1,158 @@
+/* ==========================================================================
+   Base Styles — Total Cloud Commercial Toolkit
+   Reset mínimo + estilos globales
+   ========================================================================== */
+
+/* --- Reset mínimo --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Documento --- */
+html {
+  font-size: var(--tc-font-size-base);
+  line-height: var(--tc-line-height);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--tc-font-family);
+  font-size: var(--tc-font-size-base);
+  font-weight: var(--tc-font-weight-normal);
+  color: var(--tc-navy);
+  background-color: var(--tc-gray-50);
+  min-height: 100vh;
+  padding: var(--tc-space-md);
+}
+
+/* --- Tipografía --- */
+h1, h2, h3, h4 {
+  font-weight: var(--tc-font-weight-bold);
+  line-height: 1.25;
+  color: var(--tc-navy);
+}
+
+h1 { font-size: var(--tc-font-size-2xl); margin-bottom: var(--tc-space-lg); }
+h2 { font-size: var(--tc-font-size-xl); margin-bottom: var(--tc-space-md); }
+h3 { font-size: var(--tc-font-size-lg); margin-bottom: var(--tc-space-sm); }
+
+p {
+  margin-bottom: var(--tc-space-md);
+}
+
+/* --- Enlaces --- */
+a {
+  color: var(--tc-cyan);
+  text-decoration: underline;
+  transition: color var(--tc-transition);
+}
+
+a:hover {
+  color: var(--tc-navy);
+}
+
+/* --- Botones --- */
+button {
+  font-family: var(--tc-font-family);
+  font-size: var(--tc-font-size-base);
+  font-weight: var(--tc-font-weight-semibold);
+  cursor: pointer;
+  border: none;
+  border-radius: var(--tc-radius);
+  padding: var(--tc-space-sm) var(--tc-space-md);
+  min-height: var(--tc-tap-min);
+  min-width: var(--tc-tap-min);
+  transition: background-color var(--tc-transition), box-shadow var(--tc-transition);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--tc-cyan);
+  outline-offset: 2px;
+}
+
+/* Botón primario */
+.btn-primary {
+  background-color: var(--tc-cyan);
+  color: var(--tc-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--tc-navy);
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background-color: var(--tc-white);
+  color: var(--tc-navy);
+  border: 2px solid var(--tc-gray-200);
+}
+
+.btn-secondary:hover {
+  border-color: var(--tc-cyan);
+}
+
+/* Botón de peligro (reiniciar) */
+.btn-danger {
+  background-color: var(--tc-red-bg);
+  color: var(--tc-red);
+}
+
+.btn-danger:hover {
+  background-color: var(--tc-red);
+  color: var(--tc-white);
+}
+
+/* --- Formularios --- */
+label {
+  display: block;
+  font-weight: var(--tc-font-weight-medium);
+  margin-bottom: var(--tc-space-xs);
+  font-size: var(--tc-font-size-base);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: var(--tc-space-sm);
+  accent-color: var(--tc-cyan);
+}
+
+/* --- Focus visible global --- */
+:focus-visible {
+  outline: 3px solid var(--tc-cyan);
+  outline-offset: 2px;
+}
+
+/* --- Utilidades --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--tc-space-md);
+}
+
+/* --- Responsivo --- */
+@media (max-width: 767px) {
+  body {
+    padding: var(--tc-space-sm);
+  }
+
+  h1 { font-size: var(--tc-font-size-xl); }
+  h2 { font-size: var(--tc-font-size-lg); }
+}

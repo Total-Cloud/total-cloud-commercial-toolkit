@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Print Styles — Total Cloud Commercial Toolkit
+   Optimizado para impresión y "Guardar como PDF"
+   ========================================================================== */
+
+@media print {
+  /* --- Ocultar elementos interactivos --- */
+  button,
+  .btn-primary,
+  .btn-secondary,
+  .btn-danger,
+  .no-print,
+  nav,
+  .progress-bar,
+  .question-section {
+    display: none !important;
+  }
+
+  /* --- Layout de impresión --- */
+  body {
+    font-size: 12pt;
+    color: #000000;
+    background: #FFFFFF;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* --- Encabezado de impresión --- */
+  .print-header {
+    display: block !important;
+    text-align: left;
+    border-bottom: 2px solid #002A42;
+    padding-bottom: 8pt;
+    margin-bottom: 16pt;
+  }
+
+  .print-header h1 {
+    font-size: 18pt;
+    color: #002A42;
+  }
+
+  .print-header .print-date {
+    font-size: 10pt;
+    color: #4A5E6D;
+  }
+
+  /* --- Semáforo en impresión (con patrón para B/N) --- */
+  .traffic-light--green {
+    border-left: 4px solid #1B8C3A;
+    padding-left: 8pt;
+  }
+
+  .traffic-light--yellow {
+    border-left: 4px dashed #B8860B;
+    padding-left: 8pt;
+  }
+
+  .traffic-light--red {
+    border-left: 4px solid #C62828;
+    padding-left: 8pt;
+    font-weight: bold;
+  }
+
+  .traffic-light--gray {
+    border-left: 4px dotted #607080;
+    padding-left: 8pt;
+    font-style: italic;
+  }
+
+  /* --- Tablas --- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    page-break-inside: avoid;
+  }
+
+  th, td {
+    border: 1px solid #D8DFE5;
+    padding: 6pt 8pt;
+    text-align: left;
+    font-size: 10pt;
+  }
+
+  th {
+    background-color: #EEF2F5 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-weight: bold;
+  }
+
+  /* --- Disclaimer obligatorio --- */
+  .disclaimer {
+    margin-top: 24pt;
+    padding: 12pt;
+    border: 1px solid #C62828;
+    font-size: 10pt;
+    page-break-inside: avoid;
+  }
+
+  /* --- Saltos de página --- */
+  .page-break-before {
+    page-break-before: always;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+  }
+
+  /* --- Links: mostrar URL --- */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #4A5E6D;
+  }
+
+  /* --- Ajustes de márgenes de página --- */
+  @page {
+    margin: 2cm;
+  }
+}

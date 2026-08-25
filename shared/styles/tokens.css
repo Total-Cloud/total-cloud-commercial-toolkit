@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Design Tokens — Total Cloud Commercial Toolkit
+   Versión: 1.0.0
+   ========================================================================== */
+
+:root {
+  /* --- Paleta de marca --- */
+  --tc-navy: #002A42;
+  --tc-cyan: #00A9FA;
+  --tc-white: #FFFFFF;
+  --tc-gray-50: #F8FAFB;
+  --tc-gray-100: #EEF2F5;
+  --tc-gray-200: #D8DFE5;
+  --tc-gray-400: #8A9AAB;
+  --tc-gray-600: #4A5E6D;
+  --tc-gray-800: #1A2E3D;
+
+  /* --- Semáforo de resultados --- */
+  --tc-green: #1B8C3A;
+  --tc-green-bg: #E8F5EC;
+  --tc-yellow: #B8860B;
+  --tc-yellow-bg: #FFF8E1;
+  --tc-red: #C62828;
+  --tc-red-bg: #FFEBEE;
+  --tc-gray: #607080;
+  --tc-gray-bg: #ECEFF1;
+
+  /* --- Tipografía --- */
+  --tc-font-family: 'Montserrat', Arial, sans-serif;
+  --tc-font-size-base: 16px;
+  --tc-font-size-sm: 14px;
+  --tc-font-size-lg: 20px;
+  --tc-font-size-xl: 24px;
+  --tc-font-size-2xl: 32px;
+  --tc-font-weight-normal: 400;
+  --tc-font-weight-medium: 500;
+  --tc-font-weight-semibold: 600;
+  --tc-font-weight-bold: 700;
+  --tc-line-height: 1.5;
+
+  /* --- Spacing (múltiplos de 8) --- */
+  --tc-space-xs: 4px;
+  --tc-space-sm: 8px;
+  --tc-space-md: 16px;
+  --tc-space-lg: 24px;
+  --tc-space-xl: 32px;
+  --tc-space-2xl: 48px;
+  --tc-space-3xl: 64px;
+
+  /* --- Bordes --- */
+  --tc-radius: 8px;
+  --tc-radius-sm: 4px;
+  --tc-radius-lg: 12px;
+
+  /* --- Sombras --- */
+  --tc-shadow-sm: 0 1px 3px rgba(0, 42, 66, 0.08);
+  --tc-shadow-md: 0 4px 12px rgba(0, 42, 66, 0.10);
+  --tc-shadow-lg: 0 8px 24px rgba(0, 42, 66, 0.12);
+
+  /* --- Breakpoints (para referencia en JS; CSS usa media queries) --- */
+  --tc-bp-mobile: 320px;
+  --tc-bp-tablet: 768px;
+  --tc-bp-desktop: 1024px;
+  --tc-bp-wide: 1440px;
+
+  /* --- Transiciones --- */
+  --tc-transition: 200ms ease-in-out;
+
+  /* --- Tamaño mínimo interactivo (tap target) --- */
+  --tc-tap-min: 44px;
+}
